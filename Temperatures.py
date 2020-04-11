@@ -1,3 +1,3 @@
 input()
-T=list(map(int,input().split()))
-print(T and sorted(sorted(T,reverse=True),key=abs)[0] or 0)
+T=sorted(sorted(map(int,input().split()),reverse=True),key=abs)
+print(T and T[0] or 0)
