@@ -1,7 +1,7 @@
 a,b,x,y=map(int,input().split())
 while True:
-    d=("S" if b>y else "N" if b<y else "")+("E" if a>x else "W" if a<x else "")
-    y=y+1 if "S" in d else y-1 if "N" in d else y
-    x=x+1 if "E" in d else x-1 if "W" in d else x
+    d=(b>y and "S" or b<y and "N" or "")+(a>x and "E" or a<x and "W" or "")
+    y="S" in d and y+1 or "N" in d and y-1 or y
+    x="E" in d and x+1 or "W" in d and x-1 or x
     print(d)
     
